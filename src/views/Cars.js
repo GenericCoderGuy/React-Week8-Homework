@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { DataContext } from '../contexts/DataProvider';
 
-export default function CarDex() {
+export default function Cars() {
     const [car, setCar] = useState({})
     const [carState, setCarState] = useState("LOADING")
     const [carId, setCarId] = useState(1)

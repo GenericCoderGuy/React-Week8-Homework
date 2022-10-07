@@ -3,7 +3,7 @@ import Profile from "./views/Profile";
 import Post from "./views/Post";
 import Inventory from "./views/Inventory";
 import PostSingle from "./views/PostSingle";
-import CarDex from "./views/Cars";
+import Cars from "./views/Cars";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { AuthContext } from './contexts/AuthProvider';
 import { useContext } from 'react';
@@ -23,7 +23,7 @@ function App() {
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <Link className="nav-link" to="/">Home</Link>
                             <Link className="nav-link" to="/inventory">Browse</Link>
-                            <Link className="nav-link" to="/cardex">CarDex</Link>
+                            <Link className="nav-link" to="/car">Showcase</Link>
                         </ul>
                         <div className="d-flex">
                             {
@@ -50,7 +50,10 @@ function App() {
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/createpost" element={<Post />} />
                     <Route path="/inventory" element={<Inventory />} />
-                    <Route path="/cardex" element={<CarDex />} />
+                    <Route path="/car" element={<Cars />} />
+                    {/* <Route path="/car">
+                        <Route path=":id" element={<Cars />} />
+                    </Route> */}
                 </Routes>
             </div>
         </BrowserRouter >
